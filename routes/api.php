@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\ShowImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::prefix('/image')->group(function () {
+    Route::get('/', [ShowImage::class, 'index']);
+    Route::get('/{id}', [ShowImage::class, 'find']);
 });

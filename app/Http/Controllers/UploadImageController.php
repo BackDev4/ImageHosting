@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Laracasts\Flash\Flash;
 
 class UploadImageController extends Controller
 {
@@ -25,41 +26,44 @@ class UploadImageController extends Controller
     public function create(Request $request)
     {
         if (!$request->hasFile('images')) {
-            return redirect()->back()->withErrors(['images' => 'No images were uploaded.']);
-        }
+            flash('Загрузите файлы')->error();
+            return redirect()->back();
+        } else {
+            if (count($request->file('images')) > 5) {
+                flash('Можно загрузить не более 5 изображений')->error();
+                return redirect()->back();
+            } else {
 
-        if (!$request->hasFile('images') || count($request->file('images')) > 5) {
-            return redirect()->back()->withErrors(['images' => 'You can upload up to 5 images at a time.']);
-        }
+                $request->validate([
+                    'images.*' => 'image|max:2048'
+                ]);
 
+                $uploadDir = public_path('images');
 
-        $request->validate([
-            'images.*' => 'image|max:2048'
-        ]);
+                foreach ($request->file('images') as $image) {
 
-        $uploadDir = public_path('images');
+                    $originalName = $image->getClientOriginalName();
 
-        foreach ($request->file('images') as $image) {
+                    $originalName = str_replace('png', '', $originalName);
+                    $transliteratedName = Str::lower(Str::slug($originalName, '_')) . '.' . $image->getClientOriginalExtension();
 
-            $originalName = $image->getClientOriginalName();
+                    while (file_exists($uploadDir . '/' . $transliteratedName)) {
+                        $transliteratedName = Str::lower(uniqid()) . '.' . $image->getClientOriginalExtension();
+                    }
 
-            $originalName = str_replace('png', '', $originalName);
-            $transliteratedName = Str::lower(Str::slug($originalName, '_')) . '.' . $image->getClientOriginalExtension();
+                    $image->move($uploadDir, $transliteratedName);
 
-            while (file_exists($uploadDir . '/' . $transliteratedName)) {
-                $transliteratedName = Str::lower(uniqid()) . '.' . $image->getClientOriginalExtension();
+                    Image::create([
+                        'name' => $transliteratedName,
+                        'upload_date' => now()
+                    ]);
+                }
+                flash('Успешно загружено')->success();
+                return redirect()->back();
             }
-
-            $image->move($uploadDir, $transliteratedName);
-
-            Image::create([
-                'name' => $transliteratedName,
-                'upload_date' => now()
-            ]);
         }
-
-        return redirect()->back()->with('success', 'Images uploaded successfully.');
     }
+
 
     public function show($id)
     {

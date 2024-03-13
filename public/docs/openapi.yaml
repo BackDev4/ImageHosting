@@ -1,0 +1,310 @@
+openapi: 3.0.3
+info:
+  title: Swagger
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://127.0.0.1:8000'
+paths:
+  /api/image:
+    get:
+      summary: ''
+      operationId: getApiImage
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example:
+                  -
+                    id: 1
+                    name: nasvanie.png
+                    created_at: '2024-03-13T05:48:07.000000Z'
+                    updated_at: '2024-03-13T05:48:07.000000Z'
+                  -
+                    id: 2
+                    name: screenshot_1.png
+                    created_at: '2024-03-13T05:48:08.000000Z'
+                    updated_at: '2024-03-13T05:48:08.000000Z'
+                  -
+                    id: 3
+                    name: screenshot_2.png
+                    created_at: '2024-03-13T05:48:08.000000Z'
+                    updated_at: '2024-03-13T05:48:08.000000Z'
+                  -
+                    id: 4
+                    name: screenshot_3.png
+                    created_at: '2024-03-13T05:48:08.000000Z'
+                    updated_at: '2024-03-13T05:48:08.000000Z'
+                  -
+                    id: 5
+                    name: screenshot_4.png
+                    created_at: '2024-03-13T05:48:08.000000Z'
+                    updated_at: '2024-03-13T05:48:08.000000Z'
+                  -
+                    id: 6
+                    name: 65f13e44ade88.png
+                    created_at: '2024-03-13T05:48:52.000000Z'
+                    updated_at: '2024-03-13T05:48:52.000000Z'
+                  -
+                    id: 7
+                    name: 65f13e44c3443.png
+                    created_at: '2024-03-13T05:48:52.000000Z'
+                    updated_at: '2024-03-13T05:48:52.000000Z'
+                  -
+                    id: 8
+                    name: 65f13e44c4216.png
+                    created_at: '2024-03-13T05:48:52.000000Z'
+                    updated_at: '2024-03-13T05:48:52.000000Z'
+                  -
+                    id: 9
+                    name: 65f13e44c4db1.png
+                    created_at: '2024-03-13T05:48:52.000000Z'
+                    updated_at: '2024-03-13T05:48:52.000000Z'
+                  -
+                    id: 10
+                    name: 65f13e44c5a31.png
+                    created_at: '2024-03-13T05:48:52.000000Z'
+                    updated_at: '2024-03-13T05:48:52.000000Z'
+                  -
+                    id: 11
+                    name: 65f13ee1b84c9.png
+                    created_at: '2024-03-13T05:51:29.000000Z'
+                    updated_at: '2024-03-13T05:51:29.000000Z'
+                  -
+                    id: 12
+                    name: 65f13f0501ad7.png
+                    created_at: '2024-03-13T05:52:05.000000Z'
+                    updated_at: '2024-03-13T05:52:05.000000Z'
+                  -
+                    id: 13
+                    name: 65f1407206888.png
+                    created_at: '2024-03-13T05:58:10.000000Z'
+                    updated_at: '2024-03-13T05:58:10.000000Z'
+                  -
+                    id: 14
+                    name: 65f140720fefe.png
+                    created_at: '2024-03-13T05:58:10.000000Z'
+                    updated_at: '2024-03-13T05:58:10.000000Z'
+                  -
+                    id: 15
+                    name: 65f1407210a6a.png
+                    created_at: '2024-03-13T05:58:10.000000Z'
+                    updated_at: '2024-03-13T05:58:10.000000Z'
+                  -
+                    id: 16
+                    name: 65f14072114cf.png
+                    created_at: '2024-03-13T05:58:10.000000Z'
+                    updated_at: '2024-03-13T05:58:10.000000Z'
+                  -
+                    id: 17
+                    name: 65f1407211ee5.png
+                    created_at: '2024-03-13T05:58:10.000000Z'
+                    updated_at: '2024-03-13T05:58:10.000000Z'
+                  -
+                    id: 18
+                    name: 65f140e4863cc.png
+                    created_at: '2024-03-13T06:00:04.000000Z'
+                    updated_at: '2024-03-13T06:00:04.000000Z'
+                  -
+                    id: 19
+                    name: 65f140e501c05.png
+                    created_at: '2024-03-13T06:00:05.000000Z'
+                    updated_at: '2024-03-13T06:00:05.000000Z'
+                  -
+                    id: 20
+                    name: 65f140e5029c2.png
+                    created_at: '2024-03-13T06:00:05.000000Z'
+                    updated_at: '2024-03-13T06:00:05.000000Z'
+                  -
+                    id: 21
+                    name: 65f140e50362a.png
+                    created_at: '2024-03-13T06:00:05.000000Z'
+                    updated_at: '2024-03-13T06:00:05.000000Z'
+                  -
+                    id: 22
+                    name: 65f140e504159.png
+                    created_at: '2024-03-13T06:00:05.000000Z'
+                    updated_at: '2024-03-13T06:00:05.000000Z'
+                  -
+                    id: 23
+                    name: screenshot_5.png
+                    created_at: '2024-03-13T06:00:05.000000Z'
+                    updated_at: '2024-03-13T06:00:05.000000Z'
+                  -
+                    id: 24
+                    name: 65f1419d6dbac.png
+                    created_at: '2024-03-13T06:03:09.000000Z'
+                    updated_at: '2024-03-13T06:03:09.000000Z'
+                  -
+                    id: 25
+                    name: 65f1419d86575.png
+                    created_at: '2024-03-13T06:03:09.000000Z'
+                    updated_at: '2024-03-13T06:03:09.000000Z'
+                  -
+                    id: 26
+                    name: 65f1419d8706c.png
+                    created_at: '2024-03-13T06:03:09.000000Z'
+                    updated_at: '2024-03-13T06:03:09.000000Z'
+                  -
+                    id: 27
+                    name: 65f1419d87bf7.png
+                    created_at: '2024-03-13T06:03:09.000000Z'
+                    updated_at: '2024-03-13T06:03:09.000000Z'
+                  -
+                    id: 28
+                    name: 65f1419d8857a.png
+                    created_at: '2024-03-13T06:03:09.000000Z'
+                    updated_at: '2024-03-13T06:03:09.000000Z'
+                  -
+                    id: 29
+                    name: 65f1419d88f62.png
+                    created_at: '2024-03-13T06:03:09.000000Z'
+                    updated_at: '2024-03-13T06:03:09.000000Z'
+                  -
+                    id: 30
+                    name: 65f14205b6238.png
+                    created_at: '2024-03-13T06:04:53.000000Z'
+                    updated_at: '2024-03-13T06:04:53.000000Z'
+                  -
+                    id: 31
+                    name: 65f14205bf99d.png
+                    created_at: '2024-03-13T06:04:53.000000Z'
+                    updated_at: '2024-03-13T06:04:53.000000Z'
+                  -
+                    id: 32
+                    name: 65f14205c033e.png
+                    created_at: '2024-03-13T06:04:53.000000Z'
+                    updated_at: '2024-03-13T06:04:53.000000Z'
+                  -
+                    id: 33
+                    name: 65f14205c0df0.png
+                    created_at: '2024-03-13T06:04:53.000000Z'
+                    updated_at: '2024-03-13T06:04:53.000000Z'
+                  -
+                    id: 34
+                    name: 65f14205c1718.png
+                    created_at: '2024-03-13T06:04:53.000000Z'
+                    updated_at: '2024-03-13T06:04:53.000000Z'
+                  -
+                    id: 35
+                    name: 65f1421181825.png
+                    created_at: '2024-03-13T06:05:05.000000Z'
+                    updated_at: '2024-03-13T06:05:05.000000Z'
+                  -
+                    id: 36
+                    name: 65f142118f2e9.png
+                    created_at: '2024-03-13T06:05:05.000000Z'
+                    updated_at: '2024-03-13T06:05:05.000000Z'
+                  -
+                    id: 37
+                    name: 65f142119013e.png
+                    created_at: '2024-03-13T06:05:05.000000Z'
+                    updated_at: '2024-03-13T06:05:05.000000Z'
+                  -
+                    id: 38
+                    name: 65f1421190d87.png
+                    created_at: '2024-03-13T06:05:05.000000Z'
+                    updated_at: '2024-03-13T06:05:05.000000Z'
+                  -
+                    id: 39
+                    name: 65f1421191965.png
+                    created_at: '2024-03-13T06:05:05.000000Z'
+                    updated_at: '2024-03-13T06:05:05.000000Z'
+                  -
+                    id: 40
+                    name: 65f1438cdeb08.png
+                    created_at: '2024-03-13T06:11:24.000000Z'
+                    updated_at: '2024-03-13T06:11:24.000000Z'
+                  -
+                    id: 41
+                    name: 65f1438cea3db.png
+                    created_at: '2024-03-13T06:11:24.000000Z'
+                    updated_at: '2024-03-13T06:11:24.000000Z'
+                  -
+                    id: 42
+                    name: 65f1438ceb0a1.png
+                    created_at: '2024-03-13T06:11:24.000000Z'
+                    updated_at: '2024-03-13T06:11:24.000000Z'
+                  -
+                    id: 43
+                    name: 65f1438cebaee.png
+                    created_at: '2024-03-13T06:11:24.000000Z'
+                    updated_at: '2024-03-13T06:11:24.000000Z'
+                  -
+                    id: 44
+                    name: 65f1438cec4ca.png
+                    created_at: '2024-03-13T06:11:24.000000Z'
+                    updated_at: '2024-03-13T06:11:24.000000Z'
+                  -
+                    id: 45
+                    name: 65f1438cecf2b.png
+                    created_at: '2024-03-13T06:11:24.000000Z'
+                    updated_at: '2024-03-13T06:11:24.000000Z'
+                  -
+                    id: 46
+                    name: screenshot_6.png
+                    created_at: '2024-03-13T06:11:24.000000Z'
+                    updated_at: '2024-03-13T06:11:24.000000Z'
+                  -
+                    id: 47
+                    name: 65f14728ad1c9.png
+                    created_at: '2024-03-13T06:26:48.000000Z'
+                    updated_at: '2024-03-13T06:26:48.000000Z'
+      tags:
+        - Endpoints
+      security: []
+  '/api/image/{id}':
+    get:
+      summary: ''
+      operationId: getApiImageId
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 1
+                  name: nasvanie.png
+                  created_at: '2024-03-13T05:48:07.000000Z'
+                  updated_at: '2024-03-13T05:48:07.000000Z'
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: nasvanie.png
+                  created_at:
+                    type: string
+                    example: '2024-03-13T05:48:07.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2024-03-13T05:48:07.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the image.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Endpoints
+    description: ''
